@@ -48,5 +48,11 @@ def trigger_workflow(workflowname,parameter1,parameter2):
     }
     responsevalue=requests.post(f"https://api.github.com/repos/{OWNER}/{REPO}/dispatches",json=data,headers=headers)
     print(responsevalue.content)
-
+def trigger_workflow_5(workflowname,parameter1,parameter2):
+    headers = {
+      "Accept": "application/vnd.github.v3+json",
+      "Authorization": f"token {TOKEN}",
+    }
+    responsevalue=requests.post(f"https://api.github.com/repos/{OWNER}/{REPO}/dispatches",json=data,headers=headers)
+    print(responsevalue.content)
 trigger_workflow(workflowname,parameter1,parameter2)
